@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Interview test example</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=480 height=640 style="width: 480px; height: 640px; background: #231F20"></canvas>
+    <script src="Build/Example.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Example.data",
+        frameworkUrl: "Build/Example.framework.js",
+        codeUrl: "Build/Example.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Interview test example",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
